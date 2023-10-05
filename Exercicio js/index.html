@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM97944 - Jessica Brum</title>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+    <section id="exercicio-1">
+        <h1>Exercícios dos Salário</h1>
+        <p>Resolução no console.</p>
+    </section>
+
+    <section id="exercicio-2">
+        <h1>Exercício das Tarefas</h1>
+
+        <div>
+            <label for="task-description">Descrição: </label><input type="text" id="task-description">
+            <br/>
+	    <label for="task-author">Autor: </label><input type="text" id="task-author">
+            <br/>            
+            <label for="task-department">Departamento: </label><input type="text" id="task-department">
+	    <br/>
+            <label for="task-importance">Importância: </label><input type="number" id="task-importance">
+        </div>
+
+        <button id="add-task-button">Adicionar Tarefa</button>
+        <button id="order-tasks-button">Ordenar por Importância</button>
+
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Autor</th>
+                    <th>Departamento</th>
+                    <th>Importância</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+
+            <tbody tarefas>
+                <h3>Tarefas por ordem de criação:</h3>
+                <table id="task-table">
+                    <thead>
+                        <tr>
+
+                        </tr>
+                    </thead>
+                </table>
+        
+                <h3>Descrição das tarefas por ordem de importancia:</h3>
+
+                <ul id="importance-list">
+                </ul>
+            </tbody>
+
+              
+        </table>
+    </section>
+</body>
+</html>
