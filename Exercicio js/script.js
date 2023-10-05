@@ -1,31 +1,3 @@
-const salarios = [1550, 2120, 1910, 2340, 19000, 1300, 2850, 1710, 2990, 2000];
-
-  function calcularNovoSalario(salario) {
-      if (salario <= 2000) {
-          return salario * 1.15;
-      } else {
-          return salario * 1.1; 
-      }
-  }
-
-
-  const novosSalarios = salarios.map(calcularNovoSalario);
-
-  for (let i = 0; i < salarios.length; i++) {
-
-  console.log(`O salário antigo é: ${salarios[i]} - Novo salário é: ${novosSalarios[i]}`);
-  }
-
-  const salariosSuperiores2500 = novosSalarios.filter(salario => salario > 2500);
-
-  console.log(`Os salários superiores a 2500 são: ${salariosSuperiores2500}`);
-
-  const somaSalarios = salariosSuperiores2500.reduce((total, salario) => total + salario, 0);
-
-  console.log(`A soma dos salários superiores a 2500 é: ${somaSalarios}`);
-
-
-
 const descriptionInput = document.getElementById('task-description');
 const authorInput = document.getElementById('task-author');
 const departmentInput = document.getElementById('task-department');
