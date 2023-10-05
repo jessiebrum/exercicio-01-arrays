@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cálculo de Salários - RM97944 - Jessica Brum</title>
+    <script>
+        function aplicarAumento(salario) {
+            if (salario <= 2000) {
+                return Math.floor(salario * 1.15); // aumento de 15%
+            } else {
+                return Math.floor(salario * 1.10); // aumento de 10%
+            }
+        }
+        const salarios = [2000, 3000, 4000, 5000, 6000, 1500, 1400, 1600, 1000, 1200];
+        console.log(salarios);
+        const salarioAumento = salarios.map(salario => aplicarAumento(salario));
+        console.log(salarioAumento);
+        const salarioAlto = salarioAumento.filter(salario => salario > 2500);
+        console.log(salarioAlto);
+        
+        const totalSalariosAltos = salarioAlto.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log("Total dos salários altos:", totalSalariosAltos);
+    </script>
+</head>
+<body>
+    <h1>Cálculo de Salários</h1>
+    <p>Valores de salários originais: <span id="originalSalarios"></span></p>
+    <p>Valores de salários com aumento: <span id="aumentoSalarios"></span></p>
+    <p>Salários acima de 2500: <span id="salariosAltos"></span></p>
+    <p>Total dos salários altos: <span id="totalSalariosAltos"></span></p>
+    <script>
+        // Exibir os valores no HTML
+        document.getElementById("originalSalarios").textContent = salarios.join(", ");
+        
+        const salarioAumentoInteiros = salarioAumento.map(Math.floor);
+        document.getElementById("aumentoSalarios").textContent = salarioAumentoInteiros.join(", ");
+        
+        const salarioAltoInteiros = salarioAlto.map(Math.floor);
+        document.getElementById("salariosAltos").textContent = salarioAltoInteiros.join(", ");
+        
+        document.getElementById("totalSalariosAltos").textContent = Math.floor(totalSalariosAltos);
+    </script>
+</body>
+</html>
